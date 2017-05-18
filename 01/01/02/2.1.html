@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+	<meta charset="UTF-8">
+	<title>id 选择器</title>
+	<style type="text/css">
+		div{
+			border: 1px solid #ccc;
+			width: 50%;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../../public/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		// 原生的DOM对象
+		window.onload = function() {
+			var div = document.getElementById('div1');
+			div.style.border = "3px solid red";
+		}
+
+		// jQuery对象
+		$(document).ready(function() {
+			var $div = $('#div2');
+			$div.css('border', '3px solid blue');
+		})
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<p>div 1</p>
+	</div>
+	<div id="div2">
+		<p>div 2</p>
+	</div>
+	<div id="div2">
+		<p>div 2</p>
+	</div>
+</body>
+</html>

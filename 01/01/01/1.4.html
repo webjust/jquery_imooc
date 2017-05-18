@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery对象与DOM对象</title>
+	<script type="text/javascript" src="../../public/jquery-1.12.4.js"></script>
+</head>
+<body>
+<p id="jquery1"></p>
+<hr>
+<p id="jquery2"></p>
+
+<!-- 原生的DOM对象 -->
+<script>
+	var p = document.getElementById('jquery1');
+	p.innerHTML = "你好，Hello jQuery";
+	p.style.color = 'red';
+</script>
+
+<!-- jQuery对象 -->
+<script>
+	var $p = $("#jquery2");
+	$p.html("你好，Hello jQuery").css('color', 'red');
+</script>
+</body>
+</html>

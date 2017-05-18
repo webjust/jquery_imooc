@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+	<meta charset="UTF-8">
+	<title>元素选择器</title>
+	<style type="text/css">
+		div{
+			border: 1px solid #ccc;
+			width: 50%;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../../public/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		// 原生的DOM对象
+		window.onload = function() {
+			var divs = document.getElementsByTagName('div');
+			for(var i=0; i<divs.length; i++)
+			{
+				divs[i].style.border = "3px solid #F00";
+			}
+		}
+		// jQuery对象
+		$(document).ready(function () {
+			$("p").css('border', '3px solid #00F')
+		})
+	</script>
+</head>
+<body>
+	<div class="class1">
+		<p>class 1</p>
+		<p>class 1</p>
+	</div>
+	<div class="class1">
+		<p>class 1</p>
+		<p>class 1</p>
+	</div>
+	<div class="class2">
+		<p>class 2</p>
+		<p>class 2</p>
+	</div>
+	<div class="class2">
+		<p>class 2</p>
+		<p>class 2</p>
+	</div>
+</body>
+</html>
